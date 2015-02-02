@@ -2,14 +2,14 @@
 
 class Output_Test extends PHPUnit_Framework_TestCase
 {
-	public function test_outputExpectationShouldNotFailForAString()
+	public function test__output_expectation_should_not_fail_for_a_single_string()
 	{
 		$this->expectOutputString('Hello, world!');
 		
 		echo 'Hello, world!';
 	}
 	
-	public function test_outputExpectationShouldNotFailForMultipleStrings()
+	public function test__output_expectation_shoudl_not_fail_for_multiple_strings()
 	{
 		$this->expectOutputString('HelloWorld');
 		
@@ -17,7 +17,7 @@ class Output_Test extends PHPUnit_Framework_TestCase
 		echo 'World';
 	}
 	
-	public function test_outputExpectationShouldNotFailForOutputViaCycle()
+	public function test__output_exectation_should_not_fail_for_multiple_output_using_cycle()
 	{
 		$this->expectOutputString('abc123efg');
 		
@@ -28,14 +28,14 @@ class Output_Test extends PHPUnit_Framework_TestCase
 		}
 	}
 	
-	public function test_outputRegexpExpectationShouldNotFail()
+	public function test__output_regexp_expectation_should_not_fail()
 	{
 		$this->expectOutputRegex('/^H.*ld\!$/');
 		
 		echo 'Hello, world!';
 	}
 	
-	public function test_setOutputCallbackShouldWorkCorrectly()
+	public function test__setOutputCallback__should_work_correctly()
 	{
 		$this->setOutputCallback('Output_Test::custom_callback');
 		$this->expectOutputString('!H!e!l!l!o!,! !w!o!r!l!d!!');
