@@ -12,22 +12,15 @@ class MessageService
     {
         // Getting messages from database
         $messages = array();
-        $messagesRows = DB::query("SELECT `from`, `to`, `message` FROM `messages`");
+        $messagesRows = DB::query("
+          SELECT `messages`.`message`, `u1`.`login` AS `from_login`, `u2`.`login` AS `to_login`
+          FROM `messages`
+          INNER JOIN `users` AS `u1` ON `messages`.`from` = `u1`.`id`
+          INNER JOIN `users` AS `u2` ON `messages`.`to` = `u2`.`id`
+        ");
 
         foreach ($messagesRows as $row) {
-            $message = new Message();
-            $message->message = $row['message'];
-
-            // Getting a sender
-            $from = $row['from'];
-            $userFrom = DB::query("SELECT `login` FROM `users` WHERE `id` = $from")->fetch(PDO::FETCH_ASSOC);
-            $message->from = $userFrom['login'];
-
-            // Getting an addressee
-            $to = $row['to'];
-            $userTo = DB::query("SELECT `login` FROM `users` WHERE `id` = $to")->fetch(PDO::FETCH_ASSOC);
-            $message->to = $userTo['login'];
-
+            $message = new Message($row['from_login'], $row['to_login'], $row['message']);
             $messages[] = $message;
         }
         return $messages;
