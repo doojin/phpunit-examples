@@ -9,7 +9,7 @@ class Output_Test extends PHPUnit_Framework_TestCase
 		echo 'Hello, world!';
 	}
 	
-	public function test__output_expectation_shoudl_not_fail_for_multiple_strings()
+	public function test__output_expectation_should_not_fail_for_multiple_strings()
 	{
 		$this->expectOutputString('HelloWorld');
 		
@@ -17,7 +17,7 @@ class Output_Test extends PHPUnit_Framework_TestCase
 		echo 'World';
 	}
 	
-	public function test__output_exectation_should_not_fail_for_multiple_output_using_cycle()
+	public function test__output_expectation_should_not_fail_for_multiple_output_using_cycle()
 	{
 		$this->expectOutputString('abc123efg');
 		
