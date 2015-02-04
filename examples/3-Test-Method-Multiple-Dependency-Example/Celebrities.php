@@ -2,7 +2,11 @@
 
 class Celebrities
 {
-    public static function get_musicians_array($count)
+    /**
+     * @param int $count
+     * @return array
+     */
+    public static function getMusiciansArray($count)
     {
         $musicians = array(
             'Johannes Sebastian Bach',
@@ -18,8 +22,12 @@ class Celebrities
         );
         return array_slice($musicians, 0, $count);
     }
-    
-    public static function get_actors_array($count)
+
+    /**
+     * @param int $count
+     * @return array
+     */
+    public static function getActorsArray($count)
     {
         $actors = array(
             'Jack Nicholson',

@@ -1,9 +1,10 @@
 <?php
 
-class Number_Incrementer_Test_Data implements Iterator
+class NumberIncrementerTestData implements Iterator
 {
     private $position;
-    private $test_data = array(
+
+    private $testData = array(
         array(1, 2),
         array(-2, -1),
         array(0, 1),
@@ -20,25 +21,37 @@ class Number_Incrementer_Test_Data implements Iterator
     {
         $this->position = 0;
     }
-    
+
+    /**
+     * @return string
+     */
     public function current()
     {
-        return $this->test_data[$this->position];
+        return $this->testData[$this->position];
     }
-    
+
+    /**
+     * @return int
+     */
     public function key()
     {
         return $this->position;
     }
-    
+
+    /**
+     * @return int
+     */
     public function next()
     {
         return ++$this->position;
     }
-    
+
+    /**
+     * @return bool
+     */
     public function valid()
     {
-        return isset($this->test_data[$this->position]);
+        return isset($this->testData[$this->position]);
     }
 }
 

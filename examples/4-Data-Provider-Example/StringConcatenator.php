@@ -1,14 +1,20 @@
 <?php
 
-class String_Concatenator
+class StringConcatenator
 {
     private $strings = array();
-    
-    public function add_string($string)
+
+    /**
+     * @param string $string
+     */
+    public function addString($string)
     {
         $this->strings[] = $string;
     }
-    
+
+    /**
+     * @return string
+     */
     public function merge()
     {
         return implode('', $this->strings);

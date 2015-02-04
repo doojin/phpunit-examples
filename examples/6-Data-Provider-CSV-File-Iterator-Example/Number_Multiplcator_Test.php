@@ -1,28 +1,35 @@
 <?php
 
-require_once 'CSV_File_Iterator.php';
-require_once 'Number_Multiplicator.php';
+require_once 'CSVFileIterator.php';
+require_once 'NumberMultiplier.php';
 
-class Number_Multiplicator_Test extends PHPUnit_Framework_TestCase
+class NumberMultiplierTest extends PHPUnit_Framework_TestCase
 {
+    /**
+     * @return CSVFileIterator
+     */
     public function data_provider()
     {
-        return new CSV_File_Iterator('examples/6-Data-Provider-CSV-File-Iterator-Example/test_data.csv');
+        return new CSVFileIterator('examples/6-Data-Provider-CSV-File-Iterator-Example/test_data.csv');
     }
-    
+
     /**
      * @dataProvider data_provider
+     * @param int|float $a
+     * @param int|float $b
+     * @param int|float $c
+     * @param int|float $expectedResult
      */
-    public function test__multiplicate__should_multiplicate_numbers_correctly($a, $b, $c, $expected_result)
+    public function test_multiply_ShouldMultiplyNumbersCorrectly($a, $b, $c, $expectedResult)
     {
-        $multiplicator = new Number_Multiplicator();
-        $multiplicator->add_number($a);
-        $multiplicator->add_number($b);
-        $multiplicator->add_number($c);
+        $multiplier = new NumberMultiplier();
+        $multiplier->addNumber($a);
+        $multiplier->addNumber($b);
+        $multiplier->addNumber($c);
         
-        $actual_result = $multiplicator->multiplicate();
+        $actualResult = $multiplier->multiply();
         
-        $this->assertEquals($expected_result, $actual_result);
+        $this->assertEquals($expectedResult, $actualResult);
     }
 }
 
