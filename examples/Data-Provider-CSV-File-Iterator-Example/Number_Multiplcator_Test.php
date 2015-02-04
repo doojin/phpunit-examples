@@ -10,7 +10,7 @@ class NumberMultiplierTest extends PHPUnit_Framework_TestCase
      */
     public function data_provider()
     {
-        return new CSVFileIterator('examples/6-Data-Provider-CSV-File-Iterator-Example/test_data.csv');
+        return new CSVFileIterator('examples/Data-Provider-CSV-File-Iterator-Example/test_data.csv');
     }
 
     /**
