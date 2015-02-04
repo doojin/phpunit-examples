@@ -1,0 +1,14 @@
+<phpunit>
+    <testsuites>
+        <testsuite name="first-five-examples">
+            <directory>examples/1*</directory>
+            <directory>examples/2*</directory>
+            <directory>examples/3*</directory>
+            <directory>examples/4*</directory>
+            <directory>examples/5*</directory>
+        </testsuite>
+        <testsuite name="all-tests">
+            <directory>examples</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
