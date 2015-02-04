@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<dataset>
+    <table name="users">
+        <column>id</column>
+        <column>login</column>
+        <column>password</column>
+        <row>
+            <value>1</value>
+            <value>user1</value>
+            <value>password1</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>user2</value>
+            <value>password2</value>
+        </row>
+    </table>
+</dataset>

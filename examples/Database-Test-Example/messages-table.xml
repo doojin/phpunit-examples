@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<dataset>
+    <table name="messages">
+        <column>id</column>
+        <column>from</column>
+        <column>to</column>
+        <column>message</column>
+        <row>
+            <value>1</value>
+            <value>1</value>
+            <value>2</value>
+            <value>Hello, User2!</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>1</value>
+            <value>2</value>
+            <value>Hello, User2 again!</value>
+        </row>
+        <row>
+            <value>3</value>
+            <value>2</value>
+            <value>1</value>
+            <value>Hi, User1!</value>
+        </row>
+    </table>
+</dataset>
