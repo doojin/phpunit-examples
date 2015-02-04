@@ -24,5 +24,3 @@ class NumberMultiplier
         return $result;
     }
 }
-
-?>

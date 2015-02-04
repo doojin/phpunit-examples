@@ -49,5 +49,3 @@ class Celebrities
         return array_merge($arr1, $arr2);
     }
 }
-
-?>

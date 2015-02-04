@@ -24,5 +24,3 @@ class ExceptionProvider
         throw new Exception('Default value is not set!', 123);
     }
 }
-
-?>

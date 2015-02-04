@@ -11,5 +11,3 @@ class NumberIncrementer
         return ++$a;
     }
 }
-
-?>

@@ -53,5 +53,3 @@ class CSVFileIterator implements Iterator
         $this->key++;
     }
 }
-
-?>

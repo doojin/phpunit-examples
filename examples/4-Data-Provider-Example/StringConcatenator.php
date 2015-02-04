@@ -20,5 +20,3 @@ class StringConcatenator
         return implode('', $this->strings);
     }
 }
-
-?>

@@ -54,5 +54,3 @@ class NumberIncrementerTestData implements Iterator
         return isset($this->testData[$this->position]);
     }
 }
-
-?>

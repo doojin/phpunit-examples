@@ -32,5 +32,3 @@ class KittensCreator {
         return $this->kittens;
     }
 }
-
-?>

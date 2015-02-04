@@ -55,5 +55,3 @@ class ExceptionProviderTest extends PHPUnit_Framework_TestCase
         $this->fail('Exception expected, but not found.');
     }
 }
-
-?>
