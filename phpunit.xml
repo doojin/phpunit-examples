@@ -1,7 +1,14 @@
 <phpunit>
     <testsuites>
         <testsuite name="all-tests">
-            <directory>examples/*</directory>
+            <directory>examples</directory>
+        </testsuite>
+        <testsuite name="non-db-tests">
+            <directory>examples</directory>
+            <exclude>examples/Database-Test-Example</exclude>
+        </testsuite>
+        <testsuite name="db-tests">
+            <directory>examples/Database-Test-Example</directory>
         </testsuite>
     </testsuites>
 
